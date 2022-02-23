@@ -1,0 +1,383 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  font-family: sans-serif;
+
+  background-color: #201f1e;
+}
+.hero {
+  width: 90%;
+  margin-left: 5%;
+  display: flex;
+  justify-content: left;
+  margin-top: 50px;
+}
+.icon {
+  color: #a7a9ac;
+  cursor: pointer;
+  font-size: 50px;
+}
+
+.header {
+  margin-top: 100px;
+  display: flex;
+
+  width: 80%;
+  margin-left: 10%;
+}
+.text {
+  margin-top: 50px;
+  font-weight: 700;
+  font-size: 40px;
+  color: #eea42a;
+}
+.header-left {
+  width: 50%;
+}
+
+.calendar {
+  width: 47rem;
+  height: 55rem;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  color: #fff;
+  -o-border-radius: 30px;
+}
+
+.month {
+  width: 80%;
+  height: 12rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  text-align: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.month i {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.month h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.month p {
+  font-size: 1.6rem;
+}
+
+.weekdays {
+  width: 80%;
+  height: 5rem;
+  padding: 0 0.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.weekdays div {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  width: calc(44.4rem / 7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.days {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.2rem;
+}
+
+.days div {
+  font-size: 1.4rem;
+  margin: 0.3rem;
+  width: calc(32.4rem / 7);
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  transition: background-color 0.2s;
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  -ms-transition: background-color 0.2s;
+  -o-transition: background-color 0.2s;
+}
+
+.days div:hover:not(.today) {
+  border: 0.2rem solid #777;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.prev-date,
+.next-date {
+  opacity: 0.5;
+}
+
+.today {
+  background-color: #eea42a;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.header-right {
+  display: flex;
+  justify-content: right;
+  width: 50%;
+}
+.right-text {
+  color: #fff;
+  font-weight: 700;
+}
+.text3 {
+  margin-top: 100px;
+}
+.scroll {
+  height: 600px;
+  margin-top: 140px;
+  padding-right: 10px;
+
+  overflow-y: scroll;
+}
+.scroll::-webkit-scrollbar {
+  width: 10px;
+}
+.scroll::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgb(111, 111, 111);
+}
+.scroll::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #eea42a;
+}
+
+.head-item {
+  margin-top: 20px;
+  width: 100%;
+  height: 150px;
+  background-color: #313131;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.timing {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+}
+.spots {
+  color: #fff;
+  font-size: 19px;
+  font-weight: 400;
+}
+
+.ital {
+  color: rgb(172, 172, 172);
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+}
+.btn1 {
+  width: 190px;
+  color: #eea42a;
+  border: 2px solid #eea42a;
+  background-color: transparent;
+  height: 50px;
+}
+
+@media (max-width: 1420px) {
+  .ui {
+    width: 90%;
+  }
+  .scroll {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+  }
+  .btn1{
+      width: 120px;
+  }
+  .timing{
+      font-size: 20px;
+  }
+  .spots{
+      font-size: 18px;
+  }
+}
+
+@media (max-width:1300px) {
+    .head-item{
+        flex-direction: column;
+    }
+    .ui{
+        padding: 0;
+        width:350px ;
+    }
+    .head-item{
+        justify-content: left;
+        padding: 20px 20px;
+        width: 350px;
+        height: 175px;
+    }
+    .days div{
+        width: calc(23.4rem / 7);
+    }
+    .month{
+        width: 60%;
+    }
+    .days{
+        width: 60%;
+    }
+    .weekdays{
+        width: 60%;
+    }
+    
+    .in-items{
+        width: 100%;
+    }
+    .btn{
+        width: 100%;
+
+    }
+    .scroll{
+        padding-right: 10px;
+    }
+    .btn1{
+        width: 100%;
+    }
+    .right-text{
+        font-size: 20px;
+    }
+    
+}
+
+
+
+
+
+
+
+@media (max-width:1014px) {
+
+        .header{
+            flex-direction: column-reverse;
+        }
+        .header-right{
+            width: 100%;
+            
+        }
+        .ui{
+            width: 100%;
+            padding-right: 10px;
+        }
+        .header-left{
+            width: 100%;
+            display: none;
+            margin-top: 50px;
+        }
+        .calendar{
+            width: 30rem;
+            height: 42rem;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .month{
+            width: 100%;
+        }
+        .weekdays{
+            width: 100%;
+        }
+        .days{
+            width: 100%;
+        }
+        .days div{
+          width: calc(25.4rem / 7);
+          height: 3.5rem;
+        }
+        .scroll{
+            margin-top: 0px;
+            padding-right: 0;
+            height: auto;
+            overflow:visible;
+        }
+        .head-item{
+            flex-direction: column;
+        }
+        .ui{
+            padding: 0;
+        }
+        .head-item{
+            justify-content: left;
+            padding: 20px 20px;
+            height: 175px;
+            width: 80%;
+        }
+        .in-items{
+            width: 100%;
+        }
+        .btn{
+            width: 100%;
+        }
+        .right-text{
+            font-size: 20px;
+        }
+}
+
+@media (max-width:784px) {
+    .head-item{
+        justify-content: left;
+        padding: 20px 20px;
+        height: 175px;
+        width: 100%;
+    }
+    
+}
+
+
+@media (max-width:433px) {
+    .timing{
+  font-size: 18px;
+
+    }
+    .spots{
+        font-size: 16px;
+    }
+    
+}
